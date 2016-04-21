@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actiivity.MainActivity">
+
+    <RelativeLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- ToolBar -->
+        <include
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar"/>
+
+        <com.mycompany.mainui.CustomViewPager
+            android:layout_below="@+id/toolbar"
+            android:background="@color/back_ground_UI"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <android.support.design.widget.TabLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tab_layout"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/tabLayout_indicator"
+            app:tabIndicatorHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/tabLayout_background" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_view"
+        android:id="@+id/nvView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/back_ground_navigation" />
+</android.support.v4.widget.DrawerLayout>
+    <!--
+              <android.support.design.widget.CollapsingToolbarLayout
+                  android:id="@+id/collapsing_container"
+                  app:contentScrim="@color/colorPrimary"
+                  android:fitsSystemWindows="true"
+                  app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  app:expandedTitleMarginStart="48dp"
+                  app:expandedTitleMarginEnd="64dp"> -->
+    <!-- Image show when scroll -->
+    <!--<ImageView
+        app:layout_collapseMode="parallax"
+        android:background="@drawable/toolbar"
+        android:scaleType="centerCrop"
+        android:id="@+id/image_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /> -->
+    <!-- Toolbar here -->
+    <!--</android.support.design.widget.CollapsingToolbarLayout> -->
+
+
+    <!-- Float Button -->
+    <!-- <android.support.design.widget.FloatingActionButton
+         android:id="@+id/fab"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="16dp"
+         android:src="@drawable/home_df"
+         app:borderWidth="0dp"
+         app:layout_anchor="@id/my_appbar_container"
+         app:layout_anchorGravity="bottom|right|end" /> -->
+    <!--<android.support.design.widget.CoordinatorLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <android.support.design.widget.CollapsingToolbarLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <android.support.design.widget.AppBarLayout
+                       android:id="@+id/appBar"
+                       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       /////////tabLayout and toolbar/////////////
+
+                   </android.support.design.widget.AppBarLayout>
+               </android.support.design.widget.CollapsingToolbarLayout>
+
+                   /////////viewpager here//////////
+
+           </android.support.design.widget.CoordinatorLayout> -->
+

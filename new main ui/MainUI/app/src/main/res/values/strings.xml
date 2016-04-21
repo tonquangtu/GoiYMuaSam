@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MainUI</string>
+    <string name="drawer_item_home">home</string>
+    <string name="drawer_item_settings">setting</string>
+    <string name="hint_search">Bạn muốn tìm gì ?</string>
+    <string name="shop_near_title">Cửa hàng gần đây</string>
+    <string name="more_button_name">THÊM</string>
+    <string name="hot_product_title">Sản phẩm HOT</string>
+    <string name="recommend_product_title">Gợi ý cho bạn</string>
+    <string name="sale_product_title">Khuyến mại</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="text_1_shop_suggestion">Xung quanh đây có quá trời shop</string>
+    <string name="text_2_shop_suggestion">thõa sức mua sắm cùng three cat nào !</string>
+    <string name="text_btn_shop_suggestion">Chọn vị trí để chúng tôi gợi ý thêm cho bạn</string>
+</resources>
