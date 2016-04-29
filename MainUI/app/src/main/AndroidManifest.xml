@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mycompany.mainui">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".actiivity.MainActivity" />
+        <activity android:name=".actiivity.CommentActivity" />
+        <activity
+            android:name=".actiivity.SplashActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".actiivity.ProductListInHotCatalogActivity"
+            android:theme="@style/xxx"
+            />
+        <activity android:name=".actiivity.ProductDetailActivity" />
+        <activity
+            android:name=".actiivity.ProductListInAdActivity"
+            android:theme="@style/xxx" />
+        <activity android:name=".actiivity.ShopDetailActivity" />
+
+        <activity android:name=".actiivity.NavigationCatalogActivity"
+            android:theme="@style/xxx"/>
+        <activity android:name=".actiivity.SearchActivity">
+
+        </activity>
+    </application>
+
+</manifest>

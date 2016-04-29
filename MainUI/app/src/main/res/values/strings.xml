@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MainUI</string>
+    <string name="drawer_item_home">home</string>
+    <string name="drawer_item_settings">setting</string>
+    <string name="hint_search">Bạn muốn tìm gì ?</string>
+    <string name="shop_near_title">Cửa hàng gần đây</string>
+    <string name="more_button_name">THÊM</string>
+    <string name="hot_product_title">Sản phẩm HOT</string>
+    <string name="recommend_product_title">Gợi ý cho bạn</string>
+    <string name="sale_product_title">Khuyến mại</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="text_1_shop_suggestion">Xung quanh đây có quá trời shop</string>
+    <string name="text_2_shop_suggestion">thõa sức mua sắm cùng three cat nào !</string>
+    <string name="text_btn_shop_suggestion">Chọn vị trí để chúng tôi gợi ý thêm cho bạn</string>
+    <string name="hello1">Đi Mọi Nơi</string>
+    <string name="hello2">Mua Sắm Thỏa Thích</string>
+    <string name="select_city">Bạn ở đâu ?</string>
+    <string name="next_btn_name">Tiếp tục >></string>
+    <string name="title1_product_list_in_ad">Thỏa sức mua sắm nào\nTận hưởng đi các chế !</string>
+
+    //-------------------------------------------------------------------------------------
+
+    <string name="drawer_search">Tìm kiếm</string>
+    <string name="drawer_choose_city">Chọn tỉnh thành</string>
+    <string name="drawer_shop">Cửa hàng</string>
+    <string name="drawer_trade_mark">Thương hiệu</string>
+    <string name="drawer_men_fashion">Thời trang nam</string>
+    <string name="drawer_girl_fashion">Thời trang nữ</string>
+    <string name="drawer_shoes">Dày dép</string>
+    <string name="drawer_bag">Ba lô, túi sách</string>
+    <string name="drawer_watch">Đồng hồ</string>
+    <string name="drawer_mother_and_baby">Mẹ và bé</string>
+    <string name="drawer_electronics">Đồ điện tử, công nghệ</string>
+    <string name="drawer_accessory">Phụ kiện</string>
+    <string name="drawer_house_ware">Đồ gia dụng</string>
+    <string name="drawer_food">Thực phẩm</string>
+    <string name="drawer_sport">Thể dục thể thao</string>
+    <string name="drawer_other">Thể loại khác</string>
+    <string name="txt_filter_price">Lọc theo giá</string>
+    <string name="txt_filter_sales">Khuyến mại</string>
+
+
+</resources>

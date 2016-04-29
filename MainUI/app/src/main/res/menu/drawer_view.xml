@@ -1,0 +1,68 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_menu_main_search"
+            android:icon="@drawable/navigation_icon_search2"
+            android:title="@string/drawer_search" />
+        <item
+            android:id="@+id/nav_menu_main_choose_city"
+            android:icon="@drawable/navigation_icon_city1"
+            android:title="@string/drawer_choose_city" />
+
+        <item
+            android:id="@+id/nav_menu_main_shop"
+            android:icon="@drawable/navigation_icon_shop1"
+            android:title="@string/drawer_shop" />
+        <item
+            android:id="@+id/nav_menu_main_trade_mark"
+            android:icon="@drawable/navigation_trade_mark1"
+            android:title="@string/drawer_trade_mark" />
+
+        <item
+            android:id="@+id/nav_menu_main_men_fashion"
+            android:icon="@drawable/navigation_icon_men_fashion1"
+            android:title="@string/drawer_men_fashion" />
+        <item
+            android:id="@+id/nav_menu_main_girl_fashion"
+            android:icon="@drawable/navigation_icon_girl_fashion1"
+            android:title="@string/drawer_girl_fashion" />
+        <item
+            android:id="@+id/nav_menu_main_shoes"
+            android:icon="@drawable/navigation_icon_shoes1"
+            android:title="@string/drawer_shoes" />
+        <item
+            android:id="@+id/nav_menu_main_bag"
+            android:icon="@drawable/navigation_icon_bag1"
+            android:title="@string/drawer_bag" />
+        <item
+            android:id="@+id/nav_menu_main_watch"
+            android:icon="@drawable/navigation_icon_watch1"
+            android:title="@string/drawer_watch" />
+        <item
+            android:id="@+id/nav_menu_main_mother_and_baby"
+            android:icon="@drawable/navigation_icon_mother_baby1"
+            android:title="@string/drawer_mother_and_baby" />
+        <item
+            android:id="@+id/nav_menu_main_electronics"
+            android:icon="@drawable/navigation_icon_electronic1"
+            android:title="@string/drawer_electronics" />
+
+        <item
+            android:id="@+id/nav_menu_main_accessory"
+            android:icon="@drawable/navigation_icon_accessory2"
+            android:title="@string/drawer_accessory" />
+
+        <item
+            android:id="@+id/nav_menu_main_sport"
+            android:icon="@drawable/navigation_icon_sport1"
+            android:title="@string/drawer_sport" />
+        <item
+            android:id="@+id/nav_menu_main_other"
+            android:icon="@drawable/navigation_icon_other1"
+            android:title="@string/drawer_other" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="4dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ad_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/ad_indicator"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:fillColor="@color/white"
+            app:pageColor="@color/blue_grey_300"
+            app:radius="3dp"
+            android:layout_height="15dp"
+            android:layout_width="wrap_content" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+
+

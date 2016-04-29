@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@+id/title_product_hot"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/btn_more"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/title_product_hot"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text="XEM THÊM"
+        android:textColor="@color/red_900"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</RelativeLayout>
