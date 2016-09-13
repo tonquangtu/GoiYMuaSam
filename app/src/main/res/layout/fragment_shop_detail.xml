@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_product_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ad"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/image_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_alignParentBottom="true"
+                app:radius="4dp"
+                app:fillColor="@color/white"
+                app:pageColor="@color/blue_grey_300"
+                android:layout_height="20dp"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/info_like_view_comment"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_below="@+id/ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_num_view"
+                style="?attr/borderlessButtonStyle"
+                android:drawableLeft="@drawable/icon_view1"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:text="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_below="@+id/info_like_view_comment"
+            android:id="@+id/divider"
+            android:background="@color/grey_400"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:id="@+id/like_comment_view"
+            android:orientation="horizontal"
+            android:layout_below="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_like"
+                style="?attr/borderlessButtonStyle"
+                android:drawableLeft="@drawable/icon_no_like"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:text="Thích"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="@color/red_900"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <com.facebook.share.widget.ShareButton
+                android:id="@+id/btn_share"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                style="?attr/borderlessButtonStyle"
+                android:drawableLeft="@drawable/icon_facebook2"
+                android:text="Chia sẻ"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="@color/red_900"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/btn_pin"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                style="?attr/borderlessButtonStyle"
+                android:drawableLeft="@drawable/icon_pin"
+                android:text="Ghim"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <View
+            android:layout_below="@+id/like_comment_view"
+            android:id="@+id/divider_2"
+            android:background="@color/grey_400"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TableLayout
+            android:id="@+id/info"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/divider_2"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="Tên shop:"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_shop_name"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:text="aaaaaaa"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="Nổi bật :"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_shop_sales_note"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/red_900"
+                    android:text="aaaaaaa"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="Địa chỉ:"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_shop_address"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:text="aaaaaaa"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            </TableRow>
+
+
+        </TableLayout>
+
+
+        <LinearLayout
+            android:id="@+id/xxx"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <Button
+                android:drawableLeft="@drawable/icon_chat"
+                android:id="@+id/btn_chat_shop"
+                android:layout_margin="4dp"
+                android:background="@color/blue_200"
+                android:text="Chat Shop"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:drawableLeft="@drawable/icon_phone"
+                android:layout_margin="4dp"
+                android:background="@color/amber_500"
+                android:textColor="@color/white"
+                android:id="@+id/btn_phone"
+                android:text="01672018240"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_view_map"
+            android:layout_below="@+id/xxx"
+            android:text="Xem Shop qua Map"
+            android:textColor="@color/white"
+            android:background="@color/green_400"
+            android:layout_width="match_parent"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_view_all_product_in_shop"
+            android:layout_below="@+id/btn_view_map"
+            android:text="Xem tất cả sản phẩm của Shop"
+            android:background="@color/red_900"
+            android:textColor="@color/white"
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:id="@+id/title_relation_pro"
+            android:layout_below="@+id/btn_view_all_product_in_shop"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical|left"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:text="Các địa điểm tương tự"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/btn_view_more"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical|right"
+                style="?attr/borderlessButtonStyle"
+                android:textColor="@color/red_900"
+                android:text="@string/more_button_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/recycler_relation_shop"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@+id/title_relation_pro"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:clipToPadding="false">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

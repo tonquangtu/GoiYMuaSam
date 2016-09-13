@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".actiivity.ProductListInHotCatalogActivity"
+    android:background="@color/back_ground_UI"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/product_list_in_catalog_place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tool_container_product_in_catalog"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/product_list_in_hot_catalog_toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:elevation="4dp">
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:id="@+id/filter_tool"
+            android:background="@color/color_filter"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:elevation="4dp"
+            android:layout_height="40dp"
+           >
+
+            <LinearLayout
+                android:id="@+id/view_filter_price"
+                android:clickable="true"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:text="@string/txt_filter_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+
+                <ImageButton
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/icon_filter_price"
+                    android:scaleType="centerInside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_filter_sales"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/txt_filter_sales"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <ImageButton
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_filter_sales2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_filter_detail"
+            android:id="@+id/filter_detail"
+            >
+            <ListView
+
+                android:id="@+id/list_view_filter"
+                android:dividerHeight="1dp"
+                android:divider="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+            <Button
+
+                android:id="@+id/btn_filter"
+                android:text="@string/btn_filter"
+                android:background="@color/pink_900"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

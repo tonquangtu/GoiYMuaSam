@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardBackgroundColor="@color/back_ground_UI"
+    card_view:cardCornerRadius="4dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/image_view_suggest_shop"
+            android:scaleType="centerCrop"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/txt_shop_name_row_search_suggest_shop"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:text="Nha hang long hai"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/txt_shop_address_row_search_suggest_shop"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_marginTop="4dp"
+                android:textSize="12dp"
+                android:text="Hai ba truung "
+                android:textColor="@color/grey_900"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

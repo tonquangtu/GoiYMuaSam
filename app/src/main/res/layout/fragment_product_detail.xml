@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/background_product_detail">
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tab_layout"-->
+        <!--android:elevation="4dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--app:tabMode="fixed"-->
+        <!--app:tabIndicatorHeight="2dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--app:tabIndicatorColor="@color/white"-->
+        <!--android:background="@color/tabLayout_item_product_detail2"-->
+        <!--android:layout_height="52dp"-->
+        <!--&gt;-->
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:id="@+id/tab_item_chat"-->
+            <!--android:fontFamily="sans-serif"-->
+            <!--android:icon="@drawable/icon_chat"-->
+
+            <!--android:text="Chat với Shop"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:id="@+id/tab_item_add_favorite"-->
+            <!--android:fontFamily="sans-serif"-->
+            <!--android:icon="@drawable/icon_favorite4"-->
+            <!--android:text="Thêm vào yêu thích"-->
+
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+    <!--</android.support.design.widget.TabLayout>-->
+
+
+    <android.support.v4.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/ad"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="@color/black"
+                card_view:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+                <RelativeLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/image_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="20dp"
+                        android:layout_width="match_parent" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/pr"
+                android:layout_below="@+id/ad"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txt_new_price_product"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/red_900"
+                        android:gravity="center_vertical"
+                        android:fontFamily="sans-serif"
+                        android:textSize="16sp"
+                        android:text="100.000 đ"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/txt_price_product"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="sans-serif"
+                        android:textSize="16sp"
+                        android:text="130.000 đ"
+                        android:textColor="@color/red_200"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_num_view"
+                    style="?attr/borderlessButtonStyle"
+                    android:drawableLeft="@drawable/icon_view1"
+                    android:textAllCaps="false"
+                    android:clickable="false"
+                    android:text="200"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/pr"
+                android:id="@+id/divider"
+                android:background="@color/grey_400"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/like_comment_view"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_like"
+                    android:layout_marginLeft="6dp"
+                    style="?attr/borderlessButtonStyle"
+                    android:drawableLeft="@drawable/icon_no_like"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_700"
+                    android:text="15 Thích"
+                    android:layout_weight="4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_comment"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_700"
+                    style="?attr/borderlessButtonStyle"
+                    android:drawableLeft="@drawable/icon_comment"
+                    android:text="30 Bình luận"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <com.facebook.share.widget.ShareButton
+                    android:id="@+id/btn_share"
+                    android:textColor="@color/grey_600"
+                    android:textAllCaps="false"
+                    style="?attr/borderlessButtonStyle"
+                    android:drawableLeft="@drawable/icon_facebook2"
+                    android:text="Chia sẻ"
+                    android:layout_weight="4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_below="@+id/like_comment_view"
+                android:id="@+id/divider_2"
+                android:background="@color/grey_400"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <TableLayout
+                android:id="@+id/info"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@+id/divider_2"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Tên Sản Phẩm:"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txt_product_name"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-light"
+                        android:text="aaaaaaa"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="Khuyến mại :"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txt_product_sales"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:text="aaaaaaa"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="Màu sắc:"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txt_product_color"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-light"
+                        android:text="aaaaaaa"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="Trạng Thái:"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txt_product_state"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-light"
+                        android:text="aaaaaaa"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="Kích thước:"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txt_product_size"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:text="aaaaaaa"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginTop="8dp">
+                    <Button
+                        android:id="@+id/btn_product_detail"
+                        style="?attr/borderlessButtonStyle"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:text="Xem Chi Tiết..."
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </TableRow>
+            </TableLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:id="@+id/shop"
+                android:layout_below="@+id/info"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="128dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:id="@+id/image_view_shop_icon"
+                        android:scaleType="centerCrop"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_shop_name"
+                            android:text="Shop Mr"
+                            android:textSize="14sp"
+                            android:lines="2"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/txt_shop_address"
+                            android:text="25 truong dinh, Hai ba trung ha noi"
+                            android:singleLine="true"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/txt_shop_note"
+                            android:text="Giam gia 2 tang 1"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12sp"
+                            android:maxLines="1"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <View
+                            android:layout_marginTop="12dp"
+                            android:background="@color/grey_400"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"/>
+                        <LinearLayout
+                            android:baselineAligned="false"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/shop_icon_view"
+                                android:src="@drawable/icon_view1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/txt_shop_number_view"
+                                android:text="200 luot xem"
+
+                                android:fontFamily="sans-serif-light"
+                                android:gravity="center_vertical"
+                                android:textSize="12sp"
+                                android:paddingStart="4dp"
+                                android:singleLine="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            <LinearLayout
+
+                android:id="@+id/xxx"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/shop"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+                <Button
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:textAllCaps="false"
+                    style="?attr/borderlessButtonStyle"
+                    android:drawableLeft="@drawable/icon_shop2"
+                    android:background="@color/green_300"
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_go_shop"
+                    android:text="Vao Shop"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:drawablePadding="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textAllCaps="false"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_marginRight="8dp"
+                    android:id="@+id/btn_phone"
+                    android:drawableLeft="@drawable/icon_phone"
+                    android:drawableTintMode="add"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
+                    android:text="01672018240"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/title_relation_pro"
+                android:layout_below="@+id/xxx"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical|left"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Có thể bạn quan tâm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/btn_view_more"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|right"
+                    style="?attr/borderlessButtonStyle"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/more_button_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:id="@+id/recycler_relation_product"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="56dp"
+                android:layout_below="@+id/title_relation_pro"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:clipToPadding="false">
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:clickable="true"
+            android:text="Chat Shop"
+            android:id="@+id/btn_chat_shop"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/background_btn_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:text="Ghim"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btn_add_favorite"
+            android:background="@color/background_btn_add_favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</FrameLayout>

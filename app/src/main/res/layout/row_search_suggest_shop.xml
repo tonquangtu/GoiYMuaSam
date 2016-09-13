@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/image_view_suggest_shop"
+        android:scaleType="fitCenter"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_shop_name_row_search_suggest_shop"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:text="Nha hang long hai"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/txt_shop_address_row_search_suggest_shop"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_marginTop="4dp"
+            android:textSize="12dp"
+            android:text="Hai ba truung "
+            android:textColor="@color/grey_900"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

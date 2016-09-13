@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_100"
+    tools:context="com.mycompany.mainui.actiivity.AccountActivity">
+
+    <RelativeLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <ImageView
+            android:id="@+id/image_background"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="200dp"
+            android:src="@drawable/background_profile2"
+            />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:popupTheme="@style/popupToolbarTheme"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="@android:color/transparent">
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:src="@drawable/avatar"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/white"
+                android:layout_marginTop="102dp"
+
+                />
+
+            <TextView
+                android:id="@+id/txt_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_image"
+                android:text="Vô danh"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_margin="8dp"
+        android:stretchColumns="*"
+        android:shrinkColumns="*"
+        android:layout_below="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_margin="4dp"
+                android:background="@color/red_900"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Đăng nhập"/>
+
+            <Button
+                android:background="@color/orange_900"
+                android:textColor="@color/white"
+                android:layout_margin="4dp"
+                android:layout_width="0dp"
+                android:id="@+id/btn_sign_in"
+                android:layout_weight="1"
+                android:text="Đăng ký"/>
+
+            <Button
+                android:background="@color/pink_900"
+                android:textColor="@color/white"
+                android:layout_margin="4dp"
+                android:layout_width="0dp"
+                android:id="@+id/btn_edit_info_account"
+                android:layout_weight="1"
+                android:text="Sửa TT"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="4dp">
+            <Button
+                android:id="@+id/btn_manager_shop"
+                android:background="@color/blue_900"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_span="3"
+                android:text="Quản lý Cửa hàng của bạn"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/btn_manager_personal_store"
+                android:layout_margin="4dp"
+                android:background="@color/green_900"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_span="3"
+                android:text="Quản lý kho đồ cá nhân"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_shop2" />
+
+</RelativeLayout>
