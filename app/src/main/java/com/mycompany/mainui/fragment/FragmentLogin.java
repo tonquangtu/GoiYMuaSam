@@ -1,4 +1,4 @@
-package com.mycompany.mainui.actiivity;
+package com.mycompany.mainui.fragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -22,6 +22,7 @@ import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.mycompany.mainui.R;
+import com.mycompany.mainui.actiivity.LoginNormalActivity;
 import com.mycompany.mainui.model.InfoAccount;
 import com.mycompany.mainui.model.RequestId;
 import com.mycompany.mainui.model.ResponseFromServerData;

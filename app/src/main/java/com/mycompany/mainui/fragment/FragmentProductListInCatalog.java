@@ -316,12 +316,8 @@ public class FragmentProductListInCatalog extends Fragment {
             mControlsVisible = false;
         }
 
-
         public abstract void onMoved(int distance);
         public abstract void onShow();
         public abstract void onHide();
     }
-
-
-
 }
